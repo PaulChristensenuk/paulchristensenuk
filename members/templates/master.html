@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        {% include "searchMember.html" %}<!--code to add the form to the master template-->
+        {% block content %}<!--main page of the website-->
+        {% endblock %}
+
+        {% block footer %}<!--footer for website-->
+            {% include "footer.html" %}
+        {% endblock %}
+    </body>
+</html>
+
+

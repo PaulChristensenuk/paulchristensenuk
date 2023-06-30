@@ -1,0 +1,59 @@
+{% extends "master.html" %}
+
+{% block title %}
+details about {{ drink.auction_name}} 
+ {% endblock %}
+
+{% block content %}
+<div class="w3-row w3-center">
+    <h1 class="w3-padding-32">Details of {{ drink.auction_name }} </h1>
+    <div class="w3-responsive" style="height: 491px;">
+                <table class="w3-table-all w3-center">
+                    <tr>
+                        <th>Id</th>
+                        <th>{{ drink.id }}</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>{{ drink.auction_name }}</th>
+                    </tr>
+                    <tr>
+                        <th>date</th>
+                        <th>{{ drink.dt }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.winning_bid_max</th>
+                        <th>{{ drink.winning_bid_max }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.winning_bid_min</th>
+                        <th>{{ drink.winning_bid_min }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.winning_bid_mean</th>
+                        <th>{{ drink.winning_bid_mean }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.auction_trading_volume</th>
+                        <th>{{ drink.auction_trading_volume }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.auction_lots_count</th>
+                        <th>{{ drink.auction_lots_count }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.all_auctions_lots_count</th>
+                        <th>{{ drink.all_auctions_lots_count }}</th>
+                    </tr>
+                    <tr>
+                        <th>drink.auction_slug</th>
+                        <th>{{ drink.auction_slug }}</th>
+                    </tr>
+            </table>
+     </div>
+    <div class="w3-row w3-center w3-padding-32"> 
+        <h2> Back to <a href="/members/whiskeyhunter">Whiskey Data</a></h2>
+    </div>  
+</div>
+       
+{% endblock %} 

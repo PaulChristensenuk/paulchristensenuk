@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+  <div class="w3-container" style="height: 757px;">
+    <h1>Members</h1>
+    <h3>
+    <ol>
+      {% for x in mymembers %}
+        <li><a href='details/{{ x.id }}'>{{ x.firstname }} {{ x.lastname }}</a></li>
+      {% endfor %}
+    </ol>
+  </h3>
+  </div>
+{% endblock %}

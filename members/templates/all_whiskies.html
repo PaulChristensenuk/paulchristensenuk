@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+  <div class="w3-row w3-center">
+    
+    <h1 class="w3-padding">Whiskey Data</h1>
+    <div class="w3-responsive">
+    <table class="w3-table-all w3-center">
+        <tr>
+            <th>id</th>
+            <th>date</th>
+            <th>auction name</th>
+          </tr>
+      {% for x in drink %}
+    
+      <tr class="w3-center">
+        <td>{{ x.id }}</td>
+        <td>{{ x.dt }}</td>
+        <td><a href="/members/whiskeyhunter"> {{ x.auction_name }}</a></td>
+       
+      </tr>
+      {% endfor %}
+
+</table>
+</div>
+  </div>
+{% endblock %}

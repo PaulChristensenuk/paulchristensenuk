@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+  <div class="w3-row w3-center">
+    <h1 class="w3-padding">Whiskey Data</h1>
+    <div class="w3-responsive">
+    <table class="w3-table-all w3-center">
+        <tr>
+            <th>id</th>
+            <th>auction name</th>
+            <th>date</th>
+            <th>winning bid max</th>
+            <th>winning bid min</th>
+            <th>winning bid mean</th>
+            <th>auction trading volume</th>
+            <th>auction lots count</th>
+            <th>all auctions lots count</th>
+            <th>auction slug</th>
+          </tr>
+      {% for x in drink %}
+    
+      <tr class="w3-center">
+        <td>{{ x.id }}</td>
+        <td><a href="/members/detailswhiskey/{{ x.id }}">{{ x.auction_name }}</a></td>
+        <td>{{ x.dt }}</td>
+        <td>{{ x.winning_bid_max }}</td>
+        <td>{{ x.winning_bid_min }}</td>
+        <td>{{ x.winning_bid_mean }}</td>
+        <td>{{ x.auction_trading_volume }}</td>
+        <td>{{ x.auction_lots_count }}</td>
+        <td>{{ x.all_auctions_lots_count }}</td>
+        <td>{{ x.auction_slug }}</td>
+      </tr>
+      {% endfor %}
+
+</table>
+</div>
+  </div>
+{% endblock %}

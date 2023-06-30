@@ -1,0 +1,20 @@
+{% extends 'master.html'%}
+
+{% block content %}
+
+
+<form action="{% url 'updateName'%}" method="post">
+    <label for="name">Enter name:</label>
+    <input id="name" type="text" name="name_field" value="Name" />
+    <input type="submit" value="OK" />
+</form>
+
+% {enblock} %
+
+
+
+
+
+
+
+
